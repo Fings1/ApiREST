@@ -65,8 +65,9 @@ userModel.createUser = (userData,callback) =>{
     }
 };
 
-//Function for update user, receives the userData in json for update and callback
-userModel.updateUser = (userData,callback) =>{
+//Function for update user
+//Receives the userData in json for update,the id user and callback
+userModel.updateUser = (idUser,userData,callback) =>{
     if(connection){
         var sql =`UPDATE users SET
             name = ${connection.escape(userData.name)},
@@ -78,7 +79,7 @@ userModel.updateUser = (userData,callback) =>{
             phone = ${connection.escape(userData.phone)},
             area_code = ${connection.escape(userData.area_code)},
             birthdate = ${connection.escape(userData.birthdate)}
-            WHERE id = ${connection.escape(userData.id)}`;
+            WHERE id = ${connection.escape(idUser)}`;
 
         connection.query(sql,(err,result) =>{
             if(err){

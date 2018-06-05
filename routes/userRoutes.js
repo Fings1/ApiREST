@@ -66,7 +66,8 @@ module.exports = (app) =>{
 
     //Endpoint for update user
     app.put('/users/:idUser',(req,res) =>{
-        User.updateUser(req.body,(err,data) =>{
+        var idUser = req.params.idUser;
+        User.updateUser(idUser,req.body,(err,data) =>{
             if(err){
                 res.status(500).json({
                     success: false,
