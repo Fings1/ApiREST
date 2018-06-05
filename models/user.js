@@ -4,15 +4,14 @@ var connection = require('../config/connection');
 //Model
 var userModel = {};
 
-//Function for get all users
+//Function for get all users, receives a callback
 userModel.getUsers = (callback) =>{
-
     if(connection){
         connection.query(
             'SELECT * FROM users',
             (err,rows) =>{
                 if(err){
-                    throw err;
+                    callback(err,null);
 
                 }else if (rows.length){
                     callback(null,rows);
@@ -27,13 +26,13 @@ userModel.getUsers = (callback) =>{
     }
 };
 
-//Function for get user
+//Function for get user, receives the user id and callback
 userModel.getUser = (id,callback) =>{
     if(connection){
         var sql =`SELECT * FROM users WHERE id=${connection.escape(id)}`;
         connection.query(sql,(err,row) =>{
             if(err){
-                throw err;
+                callback(err,null);
 
             }else if (row.length){
                 callback(null,row);
@@ -47,27 +46,26 @@ userModel.getUser = (id,callback) =>{
     }
 };
 
-//Function for create new user
+//Function for create new user, receives the userData in json and callback
 userModel.createUser = (userData,callback) =>{
     if(connection){
         connection.query(
             'INSERT INTO users SET ?',userData,
             (err,result) =>{
                 if(err){
-                    throw err;
+                    callback(err,null);
 
                 }else{
                     callback(null,{
                         "insertId": result.insertId
                     });
-
                 }
             }
         );
     }
 };
 
-//Function for update user
+//Function for update user, receives the userData in json for update and callback
 userModel.updateUser = (userData,callback) =>{
     if(connection){
         var sql =`UPDATE users SET
@@ -84,7 +82,7 @@ userModel.updateUser = (userData,callback) =>{
 
         connection.query(sql,(err,result) =>{
             if(err){
-                throw err;
+                callback(err,null);
 
             }else{
                 callback(null,{
@@ -95,14 +93,14 @@ userModel.updateUser = (userData,callback) =>{
     }
 };
 
-//Function for delete user
+//Function for delete user, receives the user id and callback
 userModel.deleteUser = (idUser,callback) =>{
     if(connection){
         connection.query(
             `DELETE FROM users where id = ${connection.escape(idUser)}`,
             (err,result) =>{
                 if(err){
-                    throw err;
+                    callback(err,null);
 
                 }else{
                     callback(null,{
