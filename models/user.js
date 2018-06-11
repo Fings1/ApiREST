@@ -65,8 +65,7 @@ userModel.createUser = (userData,callback) =>{
     }
 };
 
-//Function for update user
-//Receives the userData in json for update,the id user and callback
+//Function for update user, receives the userData in json for update,the id user and callback
 userModel.updateUser = (idUser,userData,callback) =>{
     if(connection){
         var sql =`UPDATE users SET
