@@ -6,6 +6,7 @@ pasos para ponerlo en marcha:
 -----------------------------
 
 + git clone
++ cd ApiREST
 + npm install
 + Importar archivo sql en la carpeta db/bd.sql
 + Configurar conexion si es necesario config/connection.js
@@ -24,5 +25,8 @@ Endpoints
 
 Test
 ----
-Se utilizo mocha y chai-http para los test, ejecutar el comando `mocha` para hacer el testeo
+Se utilizo mocha y chai-http para los test, para ejecutarlos:
+
++ cd ApiREST
++ ejecutar comando mocha
 
