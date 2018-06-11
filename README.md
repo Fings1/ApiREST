@@ -5,7 +5,7 @@ Api REST con node js utilizando express y MySQL para persistir los datos
 pasos para ponerlo en marcha:
 -----------------------------
 
-+ git clone
++ git clone https://github.com/Fings1/ApiREST
 + cd ApiREST
 + npm install
 + Importar archivo sql en la carpeta db/bd.sql
