@@ -7,11 +7,11 @@ pasos para ponerlo en marcha:
 
 + git clone
 + npm install
-+ Importar archivo sql en db/bd.sql
-+ Configurar conexion si es necesario config/connection.sql
++ Importar archivo sql en la carpeta db/bd.sql
++ Configurar conexion si es necesario config/connection.js
 + node app.js
 
-Rutas
+Endpoints
 -----
 
 | Path| Request Type|
@@ -21,3 +21,8 @@ Rutas
 |http://localhost:3000/users|POST|
 |http://localhost:3000/users/1|PUT|
 |http://localhost:3000/users/1|DELETE|
+
+Test
+----
+Se utilizo mocha y chai-http para los test, ejecutar el comando `mocha` para hacer el testeo
+
