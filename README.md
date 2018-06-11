@@ -1,6 +1,6 @@
 # ApiREST
 
-Api REST con node js utilizando express y MySQL para persistir los datos
+Api REST con node js utilizando express y MySQL.
 
 pasos para ponerlo en marcha:
 -----------------------------
