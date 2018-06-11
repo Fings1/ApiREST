@@ -28,5 +28,5 @@ Test
 Se utilizo mocha y chai-http para los test, para ejecutarlos:
 
 + cd ApiREST
-+ ejecutar comando mocha
++ ejecutar comando `mocha`
 
