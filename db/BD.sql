@@ -13,3 +13,6 @@ CREATE TABLE users(id int not null auto_increment,
                     area_code varchar(45) not null,
                     birthdate date not null,
                     CONSTRAINT pk_user PRIMARY KEY(id));
+
+
+INSERT INTO users VALUES(1,'Carlos Andres', 'Bueno Espitia', 'cra 85', 'Cali', 'Valle', 'COL', '3152136750', '4564', now());

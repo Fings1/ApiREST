@@ -39,7 +39,7 @@ userModel.getUser = (id,callback) =>{
 
             }else{
                 callback(null,{
-                    msg: "User not exist"
+                    msg: "User does not exist"
                 });
             }
         });
