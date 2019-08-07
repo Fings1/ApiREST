@@ -1,15 +1,15 @@
 # ApiREST
 
-Api REST con node js utilizando express y MySQL.
+Api REST With node.JS  Using express and MySQL.
 
-pasos para ponerlo en marcha:
+Steps:
 -----------------------------
 
 + git clone https://github.com/Fings1/ApiREST
 + cd ApiREST
 + npm install
-+ Importar archivo sql en la carpeta db/bd.sql
-+ Configurar conexion si es necesario config/connection.js
++ Import file sql in folder db/bd.sql
++ Config file for DB config/connection.js
 + node app.js
 
 Endpoints
@@ -25,8 +25,8 @@ Endpoints
 
 Test
 ----
-Se utilizo mocha y chai-http para los test, para ejecutarlos:
+Mocha and chai-http were used for the tests:
 
 + cd ApiREST
-+ ejecutar comando `mocha`
++ execute commando `mocha`
 
